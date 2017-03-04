@@ -1,0 +1,58 @@
+{{> header}}
+<div class="container">
+	<h3 class="page-header">Expedia Task</h3>
+	<div class="row">
+		<form id="test-form" role="form" action="/expedia/test-url" method="get">
+
+			<div class="row">
+				<div class="col-md-2 ">
+					<div class="form-group">
+						<label>City Name</label>
+					</div>
+				</div>
+				<div class="col-md-10">
+					<div class="form-group">
+						<input type="text" name="destinationName" class="form-control" required>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2 ">
+					<div class="form-group">
+						<label>Start Date</label>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<input type="date" name="minTripStartDate" class="form-control" required>
+					</div>
+				</div>
+
+				<div class="col-md-2 ">
+					<div class="form-group">
+						<label>Length Of Stay</label>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<input type="number" min="1" name="lengthOfStay" class="form-control" required>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2 ">
+					<div class="form-group">
+						<div class="col-md-9">
+							<input type="submit" value="Test" class="form-control" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+{{> footer}}

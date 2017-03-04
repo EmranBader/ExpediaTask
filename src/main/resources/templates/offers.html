@@ -1,0 +1,31 @@
+{{> header}}
+<div class="container">
+	<h3 class="page-header">Expedia Task</h3>
+	{{#if hotelOffers}}
+		{{#each hotelOffers}}
+			<div class="row" style="border: 1px solid #444abd; margin-bottom: 2px; padding: 1px">
+				<div class="col-md-8">
+					<h4>{{hotelInfo.hotelName}} <small>{{hotelPricingInfo.totalPriceValue}} {{hotelPricingInfo.currency}}</small></h4>
+				</div>
+				<div class="col-md-4">
+					<h4>{{hotelInfo.hotelStarRating}} Stars</h4>
+				</div>
+
+				<div class="col-md-8">
+					<label>Location: {{hotelInfo.hotelLongDestination}}, {{hotelInfo.hotelStreetAddress}}</label>
+				</div>
+				<div class="col-md-4">
+					<label>Reviewer Rate {{hotelInfo.hotelGuestReviewRating}}/5</label>
+				</div>
+
+				<div class="col-md-12">
+					<label><i>Description: {{hotelInfo.description}}</i></label>
+				</div>
+			</div>
+		{{/each}}
+	{{else}}
+		<p> Search Does Not Match Any Result !</p>
+	{{/if}}
+</div>
+
+{{> footer}}
